@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.box{
+			height:500px;
+			width:350px;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			background-color:black;
+			margin-top:30px;
+			border-radius: 15px;
+		}
+		.textview{
+			width:280px;
+			font-size:35px;
+			margin-top:30px;
+			background-color: rgb(6 78 25 / 97%);
+			margin-bottom:20px;
+			color: white;
+
+		}
+		.btn{  
+            width: 50px;  
+            height: 50px;  
+            font-size: 25px;  
+			margin-left: 28px;
+            margin-top: 20px;
+            cursor: pointer;  
+			background-color: rgb(56 52 52);
+            color: white;
+            border-radius: 8px;
+
+} 
+
+	</style>
+</head>
+<body >
+	<br><br>
+
+	<center><h1>Task-1:-Calculater</h1>
+	<hr>
+<div class="box">
+	
+<form name="form1">
+<input class="textview" name="textview">
+</form>
+<table>
+<tr>
+	    <td> <input class="btn" type="button" value="C" onclick="form1.textview.value=' ' " style="color: red;"> </td> 
+	     <td> <input class="btn" type="button" value="<-" onclick="backspace()" style="color: rgb(11, 240, 11);"> </td> 
+		 <td> <input class="btn" type="button" value="%" onclick="insert('%')" > </td> 
+		 <td> <input class="btn" type="button" value="/" onclick="insert('/')" > </td> 
+	       
+</tr>
+<tr>
+	    <td> <input class="btn" type="button" value="7" onclick="insert('7')" > </td>
+	     <td> <input class="btn" type="button" value="8" onclick="insert('8') " > </td> 
+	      <td> <input class="btn" type="button" value="9" onclick="insert('9')" > </td> 
+	       <td> <input class="btn" type="button" value="*" onclick="insert('*')" > </td> 
+</tr>
+<tr>
+	    <td> <input class="btn" type="button" value="4" onclick = "insert('4')" > </td> 
+	     <td> <input class="btn" type="button" value="5" onclick = "insert('5')" > </td> 
+	      <td> <input class="btn" type="button" value="6" onclick = "insert('6')" > </td> 
+	       <td> <input class="btn" type="button" value="-" onclick = "insert('-')" > </td> 
+</tr>
+<tr>
+	    <td> <input class="btn" type="button" value="1" onclick = "insert('1')" > </td> 
+	     <td> <input class="btn" type="button" value="2" onclick = "insert('2') " > </td> 
+	      <td> <input class="btn" type="button" value="3" onclick = "insert('3')" > </td> 
+	       <td> <input class="btn" type="button" value="+" onclick = "insert('+')" > </td> 
+</tr>
+<tr>
+	    <td> <input class="btn" type="button" value="0" onclick = "insert('0')" > </td> 
+	     <td> <input class="btn" type="button" value="00" onclick = "insert('00')" > </td> 
+	      <td> <input class="btn" type="button" value="." onclick = "insert('.')" > </td> 
+	       <td> <input class="btn" type="button" value="=" onclick = "equal()" style="background-color: rgb(85, 141, 167);"> </td> 
+</tr>
+</table>
+
+</div>
+<script type="text/javascript">
+ 
+  
+
+function insert(num)   
+{  
+document.form1.textview.value=document.form1.textview.value + num;  
+}  
+
+function equal()  
+{  
+var exp=document.form1.textview.value;  
+if(exp)  
+{  
+document.form1.textview.value = eval(exp)  
+}  
+}  
+  
+
+function backspace()  
+{  
+var exp = document.form1.textview.value;  
+document.form1.textview.value = exp.substring(0, exp.length - 1);  
+}  
+</script>
+</center>
+</body>
+</html>
